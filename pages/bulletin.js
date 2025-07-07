@@ -62,7 +62,7 @@ export default function BulletinPage() {
 const styles = {
   heroSection: {
     minHeight: '100vh',
-    backgroundImage: 'url("/hima4.jpg")',
+    backgroundImage: 'url("../hima4.JPG")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
