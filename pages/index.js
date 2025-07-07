@@ -66,7 +66,7 @@ const programData = [
 const styles = {
   heroSection: {
     minHeight: '100vh',
-    backgroundImage: 'url("/hima4.jpg")',
+    backgroundImage: 'url("../public/hima4.JPG")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
