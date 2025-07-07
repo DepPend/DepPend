@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>HIMA F.KOM</title>
-        <link rel="icon" href="../hima5.png" /> {/* ✅ pasang favicon */}
+        <link rel="icon" href="../hima5.PNG" /> {/* ✅ pasang favicon */}
       </Head>
       <Header />
       <div style={{
