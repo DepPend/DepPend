@@ -16,7 +16,7 @@ export default function Header() {
       <header style={styles.header}>
         {/* Logo */}
         <div style={styles.logoContainer}>
-          <img src="../hima5.png" alt="Logo" style={styles.logo} />
+          <img src="../hima5.PNG" alt="Logo" style={styles.logo} />
           <span style={styles.siteTitle}>Departemen Pendidikan</span>
         </div>
 
