@@ -75,7 +75,7 @@ const styles = {
   },
   heroContent: {
     maxWidth: '800px',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(228, 223, 248, 0.13)',
     padding: '2rem',
     borderRadius: '12px',
   },
