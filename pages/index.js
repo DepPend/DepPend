@@ -17,27 +17,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tentang Singkat */}
+      {/* Section: Tentang Departemen */}
       <section style={styles.aboutSection}>
-        <h2 style={styles.sectionTitle}>Apa Itu Departemen Pendidikan?</h2>
-        <p style={styles.sectionText}>
-          Departemen Pendidikan HIMA F.KOM adalah lembaga di bawah naungan Himpunan Mahasiswa 
-          yang fokus pada peningkatan kualitas akademik, pengembangan literasi, dan penyelenggaraan 
-          kegiatan ilmiah. Kami hadir untuk mendukung mahasiswa dalam tumbuh secara intelektual dan profesional.
-        </p>
-      </section>
-
-      {/* Program Unggulan */}
-      <section style={styles.programSection}>
-        <h2 style={styles.sectionTitle}>Program Unggulan</h2>
-        <div style={styles.programGrid}>
-          {programData.map((program, index) => (
-            <div key={index} style={styles.card}>
-              <img src={program.image} alt={program.title} style={styles.cardImage} />
-              <h3 style={styles.cardTitle}>{program.title}</h3>
-              <p style={styles.cardText}>{program.desc}</p>
-            </div>
-          ))}
+        <h3 style={styles.sectionTitle}>Tentang Departemen Pendidikan</h3>
+        <div style={styles.aboutContent}>
+          <p style={styles.aboutText}>
+            Departemen Pendidikan bertugas menyelenggarakan program-program yang mendukung peningkatan kualitas akademik 
+            mahasiswa F.KOM. Kami berfokus pada kegiatan ilmiah, seperti seminar, pelatihan, lomba akademik, dan pengembangan literasi.
+          </p>
+          <div style={styles.aboutText}>
+        <strong>Jobdesk Utama Departemen Pendidikan:</strong>
+        <ul style={styles.jobdeskList}>
+          <li>Mengkoordinasikan kegiatan akademik berbasis kebutuhan mahasiswa.</li>
+          <li>Menyelenggarakan program kerja seperti pelatihan, workshop, dan mentoring akademik.</li>
+          <li>Menjalin kerja sama dengan instansi pendidikan dan organisasi mahasiswa lainnya.</li>
+          <li>Mengelola informasi beasiswa dan pengembangan prestasi akademik.</li>
+          <li>Menyusun dan menerbitkan buletin pendidikan sebagai sarana edukasi.</li>
+        </ul>
+      </div>
         </div>
       </section>
     </>
