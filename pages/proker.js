@@ -10,7 +10,7 @@ export default function ProgramKerjaPage() {
     {
       title: 'Seminar Teknologi',
       desc: 'Meningkatkan kemampuan berbicara di depan umum secara percaya diri.',
-      image: '.../hima4.JPG',
+      image: '../hima4.JPG',
     },
     {
       title: 'Webinar',
@@ -171,4 +171,5 @@ const styles = {
     lineHeight: '1.5',
   },
 };
+
 
