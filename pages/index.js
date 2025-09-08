@@ -7,6 +7,7 @@ export default function HomePage() {
         <title>Beranda | Departemen Pendidikan HIMA F.KOM</title>
       </Head>
 
+
       {/* Hero Section */}
       <section style={styles.heroSection}>
         <div style={styles.heroContent}>
@@ -17,76 +18,125 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section: Tentang Departemen Pendidikan */}
-<section style={styles.aboutSection}>
-  {/* S - Situation */}
-  <h3 style={styles.sectionTitle}>Tentang Departemen Pendidikan</h3>
-  <p style={styles.sectionText}>
-    Departemen Pendidikan HIMA F.KOM hadir sebagai bagian dari Himpunan Mahasiswa
-    yang berfokus pada peningkatan mutu akademik, literasi, serta pengembangan budaya ilmiah.
-    Kami menjadi wadah untuk mahasiswa dalam berkembang secara intelektual dan profesional.
-  </p>
-</section>
+      {/* Himpunan Mahasiswa Fakultas Komputer */}
+      <section style={styles.aboutSection}>
+        <br></br>
+        <br></br>
+        <h2 style={styles.sectionTitle}>ARUNIKA BHAKTI</h2>
+      </section>
 
-{/* T - Task */}
-<section style={styles.aboutSection}>
-  <h3 style={styles.sectionTitle}>Jobdesk Utama</h3>
-  <ul style={styles.jobdeskList}>
-    <li>Mengkoordinasikan kegiatan akademik sesuai kebutuhan mahasiswa.</li>
-    <li>Menyelenggarakan pelatihan, workshop, dan mentoring akademik.</li>
-    <li>Menjalin kerja sama dengan instansi pendidikan serta organisasi mahasiswa.</li>
-    <li>Mengelola informasi beasiswa dan mendukung prestasi akademik mahasiswa.</li>
-    <li>Menerbitkan buletin pendidikan sebagai sarana literasi dan edukasi.</li>
-  </ul>
-</section>
+      {/* Himpunan Mahasiswa Fakultas Komputer */}
+      <section style={styles.aboutSection}>
+        <br></br>
+        <h2 style={styles.sectionTitle}>Himpunan Mahasiswa Fakultas Komputer</h2>
+        <p style={styles.sectionText}>
+          Himpunan Mahasiswa Fakultas Komputer (HIMA F.KOM) adalah organisasi mahasiswa
+          yang menjadi wadah pengembangan diri, penyaluran aspirasi, serta ruang kolaborasi
+          untuk seluruh mahasiswa F.KOM. HIMA berperan penting dalam membangun budaya akademik
+          yang produktif, kreatif, dan inovatif.
+        </p>
+      </section>
 
-{/* A - Action */}
-<section style={styles.aboutSection}>
-  <h3 style={styles.sectionTitle}>Langkah dan Aksi</h3>
-  <p style={styles.sectionText}>
-    Untuk mencapai tujuan tersebut, Departemen Pendidikan aktif menyusun program kerja
-    seperti seminar, pelatihan keterampilan, lomba akademik, serta mentoring mahasiswa baru.
-    Setiap program dirancang agar relevan dengan perkembangan dunia pendidikan dan kebutuhan mahasiswa.
-  </p>
-</section>
+      {/* Departemen Pendidikan */}
+      <section style={styles.aboutSection}>
+        <br></br>
+        <h2 style={styles.sectionTitle}>Departemen Pendidikan</h2>
+        <p style={styles.sectionText}>
+          Departemen Pendidikan merupakan salah satu divisi penting di bawah naungan HIMA F.KOM.
+          Departemen ini menjadi <strong>motor penggerak akademik</strong> dengan fokus pada
+          <strong> peningkatan kualitas belajar</strong>, 
+          <strong> pengembangan literasi</strong>, serta 
+          <strong> penyelenggaraan kegiatan ilmiah</strong>. 
+          Visi kami adalah menciptakan ruang inspirasi dan kolaborasi yang mendorong mahasiswa
+          untuk tumbuh sebagai generasi berprestasi dan berdaya saing.
+        </p>
+      </section>
 
-{/* R - Result */}
-<section style={styles.aboutSection}>
-  <h3 style={styles.sectionTitle}>Dampak dan Hasil</h3>
-  <p style={styles.sectionText}>
-    Melalui berbagai program dan kolaborasi, Departemen Pendidikan telah berkontribusi dalam menciptakan
-    lingkungan akademik yang produktif. Mahasiswa memperoleh kesempatan untuk meningkatkan pengetahuan,
-    mengasah keterampilan, serta meraih prestasi yang membanggakan di tingkat kampus maupun luar kampus.
-  </p>
-</section>
+      {/* Struktur Organisasi */}
+      <section style={styles.aboutSection}>
+        <br></br>
+        <h2 style={styles.sectionTitle}>Struktur Organisasi Departemen Pendidikan</h2>
+        <table style={styles.orgTable}>
+          <thead>
+            <tr>
+              <th style={styles.orgTableThTd}>Nama</th>
+              <th style={styles.orgTableThTd}>NIM</th>
+              <th style={styles.orgTableThTd}>Program Studi</th>
+              <th style={styles.orgTableThTd}>Jabatan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={styles.orgTableThTd}>Moh. Abdul Aziz</td>
+              <td style={styles.orgTableThTd}>232505059</td>
+              <td style={styles.orgTableThTd}>Sistem Informasi</td>
+              <td style={styles.orgTableThTd}>Kepala Departemen</td>
+            </tr>
+            <tr>
+              <td style={styles.orgTableThTd}>Putri</td>
+              <td style={styles.orgTableThTd}>23010101</td>
+              <td style={styles.orgTableThTd}>Bisnis Digital</td>
+              <td style={styles.orgTableThTd}>Sekretaris Departemen</td>
+            </tr>
+            <tr>
+              <td style={styles.orgTableThTd}>Neysya</td>
+              <td style={styles.orgTableThTd}>23010101</td>
+              <td style={styles.orgTableThTd}>Komputerisasi Akuntansi</td>
+              <td style={styles.orgTableThTd}>Staff Departemen</td>
+            </tr>
+            <tr>
+              <td style={styles.orgTableThTd}>Astri </td>
+              <td style={styles.orgTableThTd}>23010101</td>
+              <td style={styles.orgTableThTd}>Bisnis Digital</td>
+              <td style={styles.orgTableThTd}>Staff  Departemen</td>
+            </tr>
+            <tr>
+              <td style={styles.orgTableThTd}>Dewi</td>
+              <td style={styles.orgTableThTd}>23010101</td>
+              <td style={styles.orgTableThTd}>Bisnis Digital</td>
+              <td style={styles.orgTableThTd}>Staff  Departemen</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
+      {/* Jobdesk Departemen Pendidikan */}
+      <section style={styles.aboutSection}>
+        <br></br>
+        <h2 style={styles.sectionTitle}>Jobdesk Utama Departemen Pendidikan</h2>
+        <ul style={styles.jobdeskList}>
+          <li>Mengkoordinasikan kegiatan akademik berbasis kebutuhan mahasiswa.</li>
+          <li>Menyelenggarakan program kerja seperti <em>pelatihan, workshop</em>, dan mentoring akademik.</li>
+          <li>Menjalin kerja sama dengan instansi pendidikan dan organisasi mahasiswa lainnya.</li>
+          <li>Mengelola informasi beasiswa dan pengembangan prestasi akademik mahasiswa.</li>
+          <li>Menyusun dan menerbitkan buletin pendidikan sebagai sarana literasi kampus.</li>
+        </ul>
+        <br></br>
+        <br></br>
+      </section>
     </>
   );
 }
 
-// Dummy data program
-const programData = [
-  {
-    title: 'Mentoring Akademik',
-    desc: 'Bimbingan belajar untuk mahasiswa baru dan tingkat lanjut.',
-    image: '/proker1.jpg',
-  },
-  {
-    title: 'Pelatihan & Workshop',
-    desc: 'Meningkatkan skill akademik dan profesional mahasiswa.',
-    image: '/proker2.jpg',
-  },
-  {
-    title: 'Buletin Pendidikan',
-    desc: 'Publikasi berkala tentang isu pendidikan dan prestasi kampus.',
-    image: '/proker3.jpg',
-  },
-];
-
 const styles = {
+    orgTable: {
+    width: '100%',
+    maxWidth: '900px',
+    margin: '1.5rem auto',
+    borderCollapse: 'collapse',
+    textAlign: 'left',
+    fontSize: '1rem',
+  },
+  // bisa kasih style tambahan untuk th & td
+  orgTableThTd: {
+    padding: '12px 16px',
+    borderBottom: '1px solid #ccc', // hanya garis bawah
+  },
+
+
   heroSection: {
     minHeight: '100vh',
-    backgroundImage: 'url("../hima4.JPG")',
+    backgroundImage: 'url("/hima4.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -113,7 +163,7 @@ const styles = {
     lineHeight: '1.6',
   },
   aboutSection: {
-    padding: '4rem 2rem',
+    padding: '1rem 2rem',
     backgroundColor: '#f4f4f4',
     textAlign: 'center',
   },
@@ -130,65 +180,15 @@ const styles = {
     lineHeight: '1.7',
     color: '#333',
   },
-  programSection: {
-    padding: '4rem 2rem',
-    backgroundColor: '#fff',
-    textAlign: 'center',
-  },
-  programGrid: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: '2rem',
-    marginTop: '2rem',
-  },
-  card: {
-    backgroundColor: '#fdfdfd',
-    borderRadius: '10px',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-    maxWidth: '300px',
-    padding: '1.5rem',
+  jobdeskList: {
+    listStyleType: 'disc',
+    listStylePosition: 'inside',
     textAlign: 'left',
-    transition: 'transform 0.2s ease',
+    maxWidth: '700px',
+    margin: '0 auto',
+    padding: 0,
+    lineHeight: '1.8',
+    color: '#333',
+    fontSize: '1.05rem',
   },
-  cardImage: {
-    width: '100%',
-    height: '180px',
-    objectFit: 'cover',
-    borderRadius: '8px',
-    marginBottom: '1rem',
-  },
-  cardTitle: {
-    fontSize: '1.3rem',
-    fontWeight: 'bold',
-    color: '#05388f',
-    marginBottom: '0.5rem',
-  },
-  cardText: {
-    fontSize: '1rem',
-    color: '#555',
-    lineHeight: '1.5',
-  },
-
-  aboutContent: {
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '1.5rem',
-  maxWidth: '900px',
-  margin: '0 auto',
-  textAlign: 'left',
-},
-aboutText: {
-  fontSize: '1.1rem',
-  lineHeight: '1.7',
-  color: '#333',
-},
-jobdeskList: {
-  marginTop: '1rem',
-  paddingLeft: '1.5rem',
-  fontSize: '1.05rem',
-  lineHeight: '1.6',
-  color: '#444',
-},
-
 };
