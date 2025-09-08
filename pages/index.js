@@ -111,7 +111,7 @@ export default function HomePage() {
           <li>Mengelola informasi beasiswa dan pengembangan prestasi akademik mahasiswa.</li>
           <li>Menyusun dan menerbitkan buletin pendidikan sebagai sarana literasi kampus.</li>
         </ul>
-        <br></br>
+        <br></br> 
         <br></br>
       </section>
     </>
