@@ -49,6 +49,7 @@ export default function ProgramKerjaPage() {
       image: '../hima4.JPG',
     },
   ];
+  
   return (
     <>
       <Head>
@@ -192,6 +193,7 @@ const styles = {
     lineHeight: '1.5',
   },
 };
+
 
 
 
