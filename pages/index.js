@@ -136,7 +136,7 @@ const styles = {
 
   heroSection: {
     minHeight: '100vh',
-    backgroundImage: 'url("/hima4.jpg")',
+    backgroundImage: 'url("../hima4.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
