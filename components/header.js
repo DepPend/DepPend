@@ -26,9 +26,7 @@ export default function Header() {
             <nav>
               <ul style={styles.navList}>
                 <li><a href="/" style={styles.navLink}>Home</a></li>
-                <li><a href="/about" style={styles.navLink}>About</a></li>
-                <li><a href="/proker" style={styles.navLink}>Program Kerja</a></li>
-                <li><a href="/agenda" style={styles.navLink}>Agenda Harian</a></li>
+                <li><a href="/proker" style={styles.navLink}>Program Kerja & Agenda</a></li>
                 <li><a href="/galery" style={styles.navLink}>Galery</a></li>
                 <li><a href="/bulletin" style={styles.navLink}>Bulletin</a></li>
                 <li><a href="/contact" style={styles.navLink}>Contact</a></li>
@@ -64,9 +62,7 @@ export default function Header() {
           <nav style={{ marginTop: '2rem', width: '100%' }}>
             <ul style={styles.sidebarNavList}>
               <li><a href="/" style={styles.sidebarNavLink}>Home</a></li>
-              <li><a href="/about" style={styles.sidebarNavLink}>About</a></li>
-              <li><a href="/proker" style={styles.sidebarNavLink}>Program Kerja</a></li>
-              <li><a href="/agenda" style={styles.sidebarNavLink}>Agenda Harian</a></li>
+              <li><a href="/proker" style={styles.sidebarNavLink}>Program Kerja & Agenda</a></li>
               <li><a href="/galery" style={styles.sidebarNavLink}>Galery</a></li>
               <li><a href="/bulletin" style={styles.sidebarNavLink}>Bulletin</a></li>
               <li><a href="/contact" style={styles.sidebarNavLink}>Contact</a></li>
@@ -209,5 +205,6 @@ const styles = {
     width: '100%',
   },
 };
+
 
 
