@@ -96,7 +96,7 @@ export default function ProgramKerjaPage() {
 
       {/* Agenda */}
       <section style={styles.programSection}>
-        <h3 style={styles.sectionTitle}>Agenda Collab Departemen Pendidikan</h3>
+        <h3 style={styles.sectionTitle}>Program Kerja Collab Departemen Pendidikan</h3>
         <div style={styles.programGrid}>
           {collab.map((item, index) => (
             <div key={index} style={styles.card}>
@@ -192,6 +192,7 @@ const styles = {
     lineHeight: '1.5',
   },
 };
+
 
 
 
