@@ -42,6 +42,13 @@ export default function ProgramKerjaPage() {
     },
   ];
 
+    const agenda = [
+    {
+      title: 'BHAKTI Bersama BEM dan HIMA UM',
+      desc: 'Pertemuan rutin membahas evaluasi dan rencana kerja departemen.',
+      image: '../hima4.JPG',
+    },
+  ];
   return (
     <>
       <Head>
@@ -78,6 +85,20 @@ export default function ProgramKerjaPage() {
         <h3 style={styles.sectionTitle}>Agenda Departemen Pendidikan</h3>
         <div style={styles.programGrid}>
           {agenda.map((item, index) => (
+            <div key={index} style={styles.card}>
+              <img src={item.image} alt={item.title} style={styles.cardImage} />
+              <h4 style={styles.cardTitle}>{item.title}</h4>
+              <p style={styles.cardText}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Agenda */}
+      <section style={styles.programSection}>
+        <h3 style={styles.sectionTitle}>Agenda Collab Departemen Pendidikan</h3>
+        <div style={styles.programGrid}>
+          {collab.map((item, index) => (
             <div key={index} style={styles.card}>
               <img src={item.image} alt={item.title} style={styles.cardImage} />
               <h4 style={styles.cardTitle}>{item.title}</h4>
@@ -171,5 +192,6 @@ const styles = {
     lineHeight: '1.5',
   },
 };
+
 
 
