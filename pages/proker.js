@@ -42,7 +42,7 @@ export default function ProgramKerjaPage() {
     },
   ];
 
-    const agenda = [
+    const collab = [
     {
       title: 'BHAKTI Bersama BEM dan HIMA UM',
       desc: 'Pertemuan rutin membahas evaluasi dan rencana kerja departemen.',
@@ -192,6 +192,7 @@ const styles = {
     lineHeight: '1.5',
   },
 };
+
 
 
 
