@@ -3,29 +3,42 @@ import Head from 'next/head';
 export default function ProgramKerjaPage() {
   const programs = [
     {
-      title: 'Mentoring Akademik',
+      title: 'Seminar IT EXPO',
       desc: 'Bimbingan belajar untuk mahasiswa baru dan lanjutan dengan tutor berpengalaman.',
-      image: '/proker1.jpg',
+      image: '../hima4.jpg',
     },
     {
-      title: 'Pelatihan Public Speaking',
+      title: 'Seminar Teknologi',
       desc: 'Meningkatkan kemampuan berbicara di depan umum secara percaya diri.',
-      image: '/proker2.jpg',
+      image: '../hima4.jpg',
     },
     {
-      title: 'Seminar Nasional Pendidikan',
+      title: 'Webinar',
       desc: 'Kegiatan seminar dengan pembicara nasional untuk menambah wawasan mahasiswa.',
-      image: '/proker3.jpg',
+      image: '../hima4.jpg',
+    },
+  ];
+
+  const agenda = [
+    {
+      title: 'Saluran WhatsApp',
+      desc: 'Pertemuan rutin membahas evaluasi dan rencana kerja departemen.',
+      image: '../hima4.jpg',
     },
     {
-      title: 'Workshop Penulisan Ilmiah',
-      desc: 'Pelatihan penulisan karya ilmiah dan jurnal tingkat nasional.',
-      image: '/proker4.jpg',
+      title: 'Bulletin Pendidikan',
+      desc: 'Meningkatkan skill mahasiswa dalam pengolahan data dan riset.',
+      image: '../hima4.jpg',
     },
     {
-      title: 'Buletin Pendidikan',
-      desc: 'Publikasi berkala seputar edukasi, beasiswa, dan perkembangan dunia akademik.',
-      image: '/proker5.jpg',
+      title: 'Aspirasi Akademik',
+      desc: 'Diskusi interaktif untuk menambah wawasan literasi mahasiswa.',
+      image: '../hima4.jpg',
+    },
+    {
+      title: 'Evaluasi Bulanan',
+      desc: 'Diskusi interaktif untuk menambah wawasan literasi mahasiswa.',
+      image: '../hima4.jpg',
     },
   ];
 
@@ -48,9 +61,23 @@ export default function ProgramKerjaPage() {
 
       {/* Daftar Program */}
       <section style={styles.programSection}>
-        <h3 style={styles.sectionTitle}>Daftar Program Unggulan</h3>
+        <h3 style={styles.sectionTitle}>Program Kerja Departemen Pendidikan</h3>
         <div style={styles.programGrid}>
           {programs.map((item, index) => (
+            <div key={index} style={styles.card}>
+              <img src={item.image} alt={item.title} style={styles.cardImage} />
+              <h4 style={styles.cardTitle}>{item.title}</h4>
+              <p style={styles.cardText}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Agenda */}
+      <section style={styles.programSection}>
+        <h3 style={styles.sectionTitle}>Agenda Departemen Pendidikan</h3>
+        <div style={styles.programGrid}>
+          {agenda.map((item, index) => (
             <div key={index} style={styles.card}>
               <img src={item.image} alt={item.title} style={styles.cardImage} />
               <h4 style={styles.cardTitle}>{item.title}</h4>
@@ -66,7 +93,7 @@ export default function ProgramKerjaPage() {
 const styles = {
   heroSection: {
     minHeight: '100vh',
-    backgroundImage: 'url("../hima4.JPG")',
+    backgroundImage: 'url("/hima4.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -79,7 +106,7 @@ const styles = {
   },
   heroContent: {
     maxWidth: '800px',
-backgroundColor: 'rgba(228, 223, 248, 0.13)',
+    backgroundColor: 'rgba(228, 223, 248, 0.13)',
     padding: '2rem',
     borderRadius: '12px',
   },
@@ -101,15 +128,15 @@ backgroundColor: 'rgba(228, 223, 248, 0.13)',
     backgroundColor: '#f9f9f9',
     textAlign: 'center',
   },
-sectionTitle: {
-  fontSize: '2rem',
-  fontWeight: 'bold',
-  color: '#05388f',
-  paddingBottom: '0.5rem',
-  marginBottom: '2rem',
-  display: 'inline-block', // ✅ penting
-  borderBottom: '3px solid #05388f', // ✅ hanya sepanjang teks
-},
+  sectionTitle: {
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    color: '#05388f',
+    paddingBottom: '0.5rem',
+    marginBottom: '2rem',
+    display: 'inline-block',
+    borderBottom: '3px solid #05388f',
+  },
   programGrid: {
     display: 'flex',
     flexWrap: 'wrap',
