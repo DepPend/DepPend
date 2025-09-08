@@ -1,76 +1,85 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 1024); // tablet & hp jadi mobile
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-blue-900/95 text-white shadow-md backdrop-blur-md">
-      <div className="flex items-center justify-between px-6 py-4">
+    <>
+      <header style={styles.header}>
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <img src="/hima5.png" alt="Logo" className="h-12 w-12 object-contain" />
-          <span className="text-lg font-semibold md:text-xl">Departemen Pendidikan</span>
+        <div style={styles.logoContainer}>
+          <img src="/hima5.png" alt="Logo" style={styles.logo} />
+          <span style={styles.siteTitle}>Departemen Pendidikan</span>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex gap-6">
-            <li><a href="/" className="hover:text-gray-200">Home</a></li>
-            <li><a href="/about" className="hover:text-gray-200">About</a></li>
-            <li><a href="/proker" className="hover:text-gray-200">Program Kerja</a></li>
-            <li><a href="/agenda" className="hover:text-gray-200">Agenda Harian</a></li>
-            <li><a href="/galery" className="hover:text-gray-200">Galery</a></li>
-            <li><a href="/bulletin" className="hover:text-gray-200">Bulletin</a></li>
-            <li><a href="/contact" className="hover:text-gray-200">Contact</a></li>
-          </ul>
-          <a href="/login">
-            <button className="rounded-lg bg-white px-4 py-2 font-semibold text-blue-900 hover:bg-gray-100">
-              Login
-            </button>
-          </a>
-        </nav>
+        {!isMobile && (
+          <div style={styles.desktopMenu}>
+            <nav>
+              <ul style={styles.navList}>
+                <li><a href="/" style={styles.navLink}>Home</a></li>
+                <li><a href="/about" style={styles.navLink}>About</a></li>
+                <li><a href="/proker" style={styles.navLink}>Program Kerja</a></li>
+                <li><a href="/agenda" style={styles.navLink}>Agenda Harian</a></li>
+                <li><a href="/galery" style={styles.navLink}>Galery</a></li>
+                <li><a href="/bulletin" style={styles.navLink}>Bulletin</a></li>
+                <li><a href="/contact" style={styles.navLink}>Contact</a></li>
+              </ul>
+            </nav>
+            <a href="/login">
+              <button style={styles.loginButton}>Login</button>
+            </a>
+          </div>
+        )}
 
         {/* Mobile Hamburger */}
-        <button
-          className="block text-3xl md:hidden"
-          onClick={() => setIsOpen(true)}
-          aria-label="Open Menu"
-        >
-          ☰
-        </button>
-      </div>
-
-      {/* Mobile Sidebar */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-blue-900/95 text-white transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex justify-end p-4">
+        {isMobile && (
           <button
-            className="text-3xl"
-            onClick={() => setIsOpen(false)}
-            aria-label="Close Menu"
+            style={styles.hamburgerButton}
+            onClick={() => setIsOpen(true)}
+            aria-label="Open Menu"
           >
-            ×
+            ☰
           </button>
+        )}
+      </header>
+
+      {/* Mobile Sidebar Menu */}
+      {isMobile && (
+        <div
+          style={{
+            ...styles.sidebar,
+            right: isOpen ? 0 : '-100%',
+          }}
+        >
+          <button onClick={() => setIsOpen(false)} style={styles.closeButton}>×</button>
+          <nav style={{ marginTop: '2rem', width: '100%' }}>
+            <ul style={styles.sidebarNavList}>
+              <li><a href="/" style={styles.sidebarNavLink}>Home</a></li>
+              <li><a href="/about" style={styles.sidebarNavLink}>About</a></li>
+              <li><a href="/proker" style={styles.sidebarNavLink}>Program Kerja</a></li>
+              <li><a href="/agenda" style={styles.sidebarNavLink}>Agenda Harian</a></li>
+              <li><a href="/galery" style={styles.sidebarNavLink}>Galery</a></li>
+              <li><a href="/bulletin" style={styles.sidebarNavLink}>Bulletin</a></li>
+              <li><a href="/contact" style={styles.sidebarNavLink}>Contact</a></li>
+              <li>
+                <a href="/login">
+                  <button style={styles.sidebarLoginButton}>Login</button>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav className="flex flex-col gap-6 px-6 text-lg">
-          <a href="/" onClick={() => setIsOpen(false)}>Home</a>
-          <a href="/about" onClick={() => setIsOpen(false)}>About</a>
-          <a href="/proker" onClick={() => setIsOpen(false)}>Program Kerja</a>
-          <a href="/agenda" onClick={() => setIsOpen(false)}>Agenda Harian</a>
-          <a href="/galery" onClick={() => setIsOpen(false)}>Galery</a>
-          <a href="/bulletin" onClick={() => setIsOpen(false)}>Bulletin</a>
-          <a href="/contact" onClick={() => setIsOpen(false)}>Contact</a>
-          <a href="/login">
-            <button className="mt-4 w-full rounded-lg bg-white px-4 py-2 font-bold text-blue-900 hover:bg-gray-100">
-              Login
-            </button>
-          </a>
-        </nav>
-      </div>
-    </header>
+      )}
+    </>
   );
 }
 
@@ -88,31 +97,38 @@ const styles = {
     backdropFilter: 'blur(8px)',
     boxShadow: '0 2px 12px rgba(0, 0, 0, 0.25)',
     width: '100%',
+    maxWidth: '1400px', // biar di laptop/monitor besar tetap rapi
+    margin: '0 auto',   // center header di layar besar
     transition: 'all 0.3s ease',
+    boxSizing: 'border-box',
   },
   logoContainer: {
     display: 'flex',
     alignItems: 'center',
     gap: '0.75rem',
+    flexShrink: 0,
   },
   logo: {
-    height: '45px',
-    width: '45px',
+    height: '40px',
+    width: '40px',
     objectFit: 'contain',
   },
   siteTitle: {
     fontWeight: 600,
-    fontSize: '1.3rem',
+    fontSize: '1.2rem',
+    flexShrink: 0,
   },
   desktopMenu: {
     display: 'flex',
     alignItems: 'center',
     gap: '2rem',
+    flexWrap: 'wrap', // biar gak overflow kalau layar kecil
   },
   navList: {
     display: 'flex',
+    flexWrap: 'wrap', // responsif
     listStyle: 'none',
-    gap: '1.5rem',
+    gap: '1.2rem',
     margin: 0,
     padding: 0,
   },
@@ -121,16 +137,18 @@ const styles = {
     textDecoration: 'none',
     fontWeight: 500,
     fontSize: '1rem',
+    whiteSpace: 'nowrap',
   },
   loginButton: {
     backgroundColor: 'white',
     color: 'rgb(5, 56, 143)',
     border: 'none',
-    padding: '0.5rem 1.2rem',
+    padding: '0.5rem 1rem',
     borderRadius: '8px',
     cursor: 'pointer',
     fontWeight: 600,
-    fontSize: '0.95rem',
+    fontSize: '0.9rem',
+    flexShrink: 0,
   },
   hamburgerButton: {
     background: 'none',
@@ -144,7 +162,7 @@ const styles = {
     top: 0,
     right: '-100%',
     width: '80%',
-    maxWidth: '250px',
+    maxWidth: '280px',
     height: '100vh',
     backgroundColor: 'rgba(5, 56, 143, 0.95)',
     color: 'white',
@@ -155,6 +173,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    boxSizing: 'border-box',
   },
   closeButton: {
     background: 'none',
@@ -175,7 +194,7 @@ const styles = {
   sidebarNavLink: {
     color: 'white',
     textDecoration: 'none',
-    fontSize: '1.1rem',
+    fontSize: '1.05rem',
   },
   sidebarLoginButton: {
     marginTop: '2rem',
