@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
     <footer style={styles.footer}>
-      <p>&copy; 2025 Departemen Pendidikan.</p>
+      <p>&copy; 2025 Departemen Pendidikan</p>
       <p>Himpunan Mahasiswa Fakultas Komputer</p>
-      <p>Semua Hak Dilindungi.</p>
+      <p>Semua Hak Dilindungi</p>
     </footer>
   );
 }
@@ -22,3 +22,4 @@ const styles = {
     lineHeight: '1.6',
   },
 };
+
