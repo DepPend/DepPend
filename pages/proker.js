@@ -5,17 +5,17 @@ export default function ProgramKerjaPage() {
     {
       title: 'Seminar IT EXPO',
       desc: 'Bimbingan belajar untuk mahasiswa baru dan lanjutan dengan tutor berpengalaman.',
-      image: '../hima4.jpg',
+      image: '../hima4.JPG',
     },
     {
       title: 'Seminar Teknologi',
       desc: 'Meningkatkan kemampuan berbicara di depan umum secara percaya diri.',
-      image: '../hima4.jpg',
+      image: '.../hima4.JPG',
     },
     {
       title: 'Webinar',
       desc: 'Kegiatan seminar dengan pembicara nasional untuk menambah wawasan mahasiswa.',
-      image: '../hima4.jpg',
+      image: '../hima4.JPG',
     },
   ];
 
@@ -23,22 +23,22 @@ export default function ProgramKerjaPage() {
     {
       title: 'Saluran WhatsApp',
       desc: 'Pertemuan rutin membahas evaluasi dan rencana kerja departemen.',
-      image: '../hima4.jpg',
+      image: '../hima4.JPG',
     },
     {
       title: 'Bulletin Pendidikan',
       desc: 'Meningkatkan skill mahasiswa dalam pengolahan data dan riset.',
-      image: '../hima4.jpg',
+      image: '../hima4.JPG',
     },
     {
       title: 'Aspirasi Akademik',
       desc: 'Diskusi interaktif untuk menambah wawasan literasi mahasiswa.',
-      image: '../hima4.jpg',
+      image: '../hima4.JPG',
     },
     {
       title: 'Evaluasi Bulanan',
       desc: 'Diskusi interaktif untuk menambah wawasan literasi mahasiswa.',
-      image: '../hima4.jpg',
+      image: '../hima4.JPG',
     },
   ];
 
@@ -93,7 +93,7 @@ export default function ProgramKerjaPage() {
 const styles = {
   heroSection: {
     minHeight: '100vh',
-    backgroundImage: 'url("/hima4.jpg")',
+    backgroundImage: 'url("../hima4.JPG")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -171,3 +171,4 @@ const styles = {
     lineHeight: '1.5',
   },
 };
+
