@@ -17,26 +17,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section: Tentang Departemen */}
-      <section style={styles.aboutSection}>
-        <h3 style={styles.sectionTitle}>Tentang Departemen Pendidikan</h3>
-        <div style={styles.aboutContent}>
-          <p style={styles.aboutText}>
-            Departemen Pendidikan bertugas menyelenggarakan program-program yang mendukung peningkatan kualitas akademik 
-            mahasiswa F.KOM. Kami berfokus pada kegiatan ilmiah, seperti seminar, pelatihan, lomba akademik, dan pengembangan literasi.
-          </p>
-          <div style={styles.aboutText}>
-        <strong>Jobdesk Utama Departemen Pendidikan:</strong>
-        <ul style={styles.jobdeskList}>
-          <li>Mengkoordinasikan kegiatan akademik berbasis kebutuhan mahasiswa.</li>
-          <li>Menyelenggarakan program kerja seperti pelatihan, workshop, dan mentoring akademik.</li>
-          <li>Menjalin kerja sama dengan instansi pendidikan dan organisasi mahasiswa lainnya.</li>
-          <li>Mengelola informasi beasiswa dan pengembangan prestasi akademik.</li>
-          <li>Menyusun dan menerbitkan buletin pendidikan sebagai sarana edukasi.</li>
-        </ul>
-      </div>
-        </div>
-      </section>
+      {/* Section: Tentang Departemen Pendidikan */}
+<section style={styles.aboutSection}>
+  {/* S - Situation */}
+  <h3 style={styles.sectionTitle}>Tentang Departemen Pendidikan</h3>
+  <p style={styles.sectionText}>
+    Departemen Pendidikan HIMA F.KOM hadir sebagai bagian dari Himpunan Mahasiswa
+    yang berfokus pada peningkatan mutu akademik, literasi, serta pengembangan budaya ilmiah.
+    Kami menjadi wadah untuk mahasiswa dalam berkembang secara intelektual dan profesional.
+  </p>
+</section>
+
+{/* T - Task */}
+<section style={styles.aboutSection}>
+  <h3 style={styles.sectionTitle}>Jobdesk Utama</h3>
+  <ul style={styles.jobdeskList}>
+    <li>Mengkoordinasikan kegiatan akademik sesuai kebutuhan mahasiswa.</li>
+    <li>Menyelenggarakan pelatihan, workshop, dan mentoring akademik.</li>
+    <li>Menjalin kerja sama dengan instansi pendidikan serta organisasi mahasiswa.</li>
+    <li>Mengelola informasi beasiswa dan mendukung prestasi akademik mahasiswa.</li>
+    <li>Menerbitkan buletin pendidikan sebagai sarana literasi dan edukasi.</li>
+  </ul>
+</section>
+
+{/* A - Action */}
+<section style={styles.aboutSection}>
+  <h3 style={styles.sectionTitle}>Langkah dan Aksi</h3>
+  <p style={styles.sectionText}>
+    Untuk mencapai tujuan tersebut, Departemen Pendidikan aktif menyusun program kerja
+    seperti seminar, pelatihan keterampilan, lomba akademik, serta mentoring mahasiswa baru.
+    Setiap program dirancang agar relevan dengan perkembangan dunia pendidikan dan kebutuhan mahasiswa.
+  </p>
+</section>
+
+{/* R - Result */}
+<section style={styles.aboutSection}>
+  <h3 style={styles.sectionTitle}>Dampak dan Hasil</h3>
+  <p style={styles.sectionText}>
+    Melalui berbagai program dan kolaborasi, Departemen Pendidikan telah berkontribusi dalam menciptakan
+    lingkungan akademik yang produktif. Mahasiswa memperoleh kesempatan untuk meningkatkan pengetahuan,
+    mengasah keterampilan, serta meraih prestasi yang membanggakan di tingkat kampus maupun luar kampus.
+  </p>
+</section>
+
     </>
   );
 }
@@ -146,4 +169,26 @@ const styles = {
     color: '#555',
     lineHeight: '1.5',
   },
+
+  aboutContent: {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1.5rem',
+  maxWidth: '900px',
+  margin: '0 auto',
+  textAlign: 'left',
+},
+aboutText: {
+  fontSize: '1.1rem',
+  lineHeight: '1.7',
+  color: '#333',
+},
+jobdeskList: {
+  marginTop: '1rem',
+  paddingLeft: '1.5rem',
+  fontSize: '1.05rem',
+  lineHeight: '1.6',
+  color: '#444',
+},
+
 };
